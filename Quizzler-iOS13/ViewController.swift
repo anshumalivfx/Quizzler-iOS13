@@ -9,12 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var trueButton: UIButton!
+    @IBOutlet weak var falseButton: UIButton!
     
+    let questions = [
+        "Hell Yeah",
+        "No Questions for you bitch",
+        "OKAY"
+    ]
+    var questionNumber = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        questionLabel.text = questions[questionNumber]
         // Do any additional setup after loading the view.
     }
 
-
+    
+    @IBAction func answerButtonPressed(_ sender: UIButton) {
+        questionNumber += 1
+    }
+    
 }
 
