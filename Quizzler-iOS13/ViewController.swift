@@ -15,22 +15,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var falseButton: UIButton!
     
     let questions = [
-        "Hell Yeah",
-        "No Questions for you bitch",
-        "OKAY"
+        ["Your Mom", "False"],
+        ["No Questions for you bitch", "True"],
+        ["BLM", "False"]
     ]
     var questionNumber = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        questionLabel.text = questions[questionNumber]
+        updateUI()
+        
         // Do any additional setup after loading the view.
     }
 
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
+        let userAnswer = sender.currentTitle
+        let actualAnswer = questions[questionNumber][1]
+        
+        if(userAnswer == actualAnswer){
+            print("Right")
+        }
+        else {
+            print("Wrong")
+        }
+        
         questionNumber += 1
+        updateUI()
+    }
+    
+    func updateUI(){
+        questionLabel.text = questions[questionNumber][0]
+        
+        
     }
     
 }
