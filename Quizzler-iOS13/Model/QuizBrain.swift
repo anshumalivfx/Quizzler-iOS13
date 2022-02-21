@@ -10,6 +10,7 @@ import Foundation
 
 struct QuizBrain {
     var questionNumber = 0
+    var score = 0
     let questions = [
         Question(q: "A slug's blood is green.", a: "True"),
         Question(q: "Approximately one quarter of human bones are in the feet.", a: "True"),
@@ -25,5 +26,22 @@ struct QuizBrain {
         Question(q: "Chocolate affects a dog's heart and nervous system; a few ounces are enough to kill a small dog.", a: "True")
         
     ]
+    
+    mutating func checkAnswer(_ userAnswer: String) -> Bool {
+        if userAnswer == questions[questionNumber].answer {
+            score += 1
+            return true
+            // user got it right
+        }
+        else {
+            return false
+            // user got it wrong
+        }
+        
+    }
+    
+    func getScore() -> Int {
+        return score
+    }
     
 }

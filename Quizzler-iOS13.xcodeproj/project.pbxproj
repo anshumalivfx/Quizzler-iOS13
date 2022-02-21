@@ -55,6 +55,7 @@
 		7ABA622827C3636200C00237 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD4BDE5422D878BC005BA4CC /* LaunchScreen.storyboard */,
 				AD4BDE4F22D878BA005BA4CC /* Main.storyboard */,
 			);
 			path = View;
@@ -93,7 +94,6 @@
 				7ABA622827C3636200C00237 /* View */,
 				7ABA622927C3636D00C00237 /* Controller */,
 				AD4BDE5222D878BC005BA4CC /* Assets.xcassets */,
-				AD4BDE5422D878BC005BA4CC /* LaunchScreen.storyboard */,
 				AD4BDE5722D878BC005BA4CC /* Info.plist */,
 				7ABA622727C3634900C00237 /* Model */,
 			);
